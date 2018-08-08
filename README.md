@@ -1,2 +1,2 @@
 # simple-node-api
-Simple node API that prints numbers from 1 to 100
+For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'. For multiples of both 3 and 5, print 'Pédo'
