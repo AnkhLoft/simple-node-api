@@ -30,6 +30,6 @@ module.exports = printPedo = (min, max) => {
             result[i] = min;
         }
     }
-    console.log(result);
+
     return result;
 };
