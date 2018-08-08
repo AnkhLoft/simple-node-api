@@ -1,0 +1,26 @@
+{
+  "name": "simple-node-api",
+  "version": "1.0.0",
+  "description": "Simple node API that prints the numbers from 1 to 100 by default upon receiving a single request with no parameters. For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'. For multiples of both 3 and 5, print 'Pédo'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnkhLoft/simple-node-api.git"
+  },
+  "author": "Helder Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnkhLoft/simple-node-api/issues"
+  },
+  "homepage": "https://github.com/AnkhLoft/simple-node-api#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
