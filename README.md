@@ -5,29 +5,30 @@ For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'
 
 ## Todos
 
-- Single request with no parameters return numbers from 1 to 100 including the words 'Pé' and 'Do'
-- Define interval of numbers to print in the request (only positive numbers)
+- ~~Single request with no parameters return numbers from 1 to 100 including the words 'Pé' and 'Do'~~
+- ~~Define interval of numbers to print in the request (only positive numbers)~~
 - Create documentation
     - ~~Installation~~
-    - Swagger to document the API
+    - Use Swagger to document the API
 - Testing
 
-## Installation
+## Environment setup
 
-**Inside the project folder**  
+**Inside the project folder, in the terminal run the following commands**  
 
-Install the dependencies by running
+### Installation
+Install the project dependencies by running 
 ```
 $ npm install
 ```
 
-## Run the server
-In your terminal run
+### Run the server
+Start the server by running
 ```
 $ npm start
 ```
 
-## Change the server port number
+### Change the server port number (only if you need)
 By default is set to 3000, you can change it by running
 
 ```
