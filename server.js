@@ -32,5 +32,5 @@ app.get('/api/print', (req, res) => {
     res.send(printPedo(rangeNums.min, rangeNums.max));
 });
 
-console.log(`Listening on port ${port}...`)
+console.log(`Listening on port ${port}...`);
 app.listen(port);
