@@ -7,11 +7,13 @@ For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'
 
 - ~~Single request with no parameters return numbers from 1 to 100 including the words 'Pé' and 'Do'~~
 - ~~Define interval of numbers to print in the request (only positive numbers)~~
-- Default 404 not found
+- ~~Default 404 not found~~
 - Create documentation
     - ~~Installation~~
-    - Use Swagger to document the API
+    - ~~Use Swagger to document the API~~
+    - Simple guide introduction to the swag documentation tool used in the README file
 - Testing
+- Add security
 
 ## Environment setup
 

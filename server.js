@@ -35,18 +35,18 @@ const options = {
 expressSwagger(options);
 
 
-// Root Route
+// Redirect the root path to /api-docs
 app.get('/', (req, res) => {
     res.redirect('/api-docs');
 });
 
 /**
- * This function comment is parsed by doctrine
+ * This route will return an array of peDo values
  * @route GET /api/print
  * @group api - basic functionality of API
  * @param {number} min.query - minimum value
  * @param {number} max.query - maximum value
- * @returns {object} 200 - An array of peDo values
+ * @returns {array} 200 - An array of peDo values
  * @returns {Error}  400 - Invalid parameters
  */
 app.get('/v1/api/print', (req, res) => {
