@@ -11,7 +11,7 @@ For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'
 - Create documentation
     - ~~Installation~~
     - ~~Use Swagger to document the API~~
-    - Simple guide introduction to the swag documentation tool used in the README file
+    - Simple guide introduction to the swag documentation tool
 - Testing
 - Add security
 
