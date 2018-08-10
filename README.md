@@ -13,6 +13,8 @@ For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'
     - ~~Use Swagger to document the API~~
     - Simple guide introduction to the swag documentation tool
 - Testing
+    - ~~TDD tests to the pedoLogic function~~
+    - Black-box testing
 - Add security
 
 ## Environment setup
@@ -36,4 +38,14 @@ By default is set to 3000, you can change it by running
 
 ```
 $ export PORT=<number> // Unix systems
+```
+
+## Testing environment setup
+After you install all the above dependencies make sure you have mocha installed globally by running
+```
+$ npm i -g mocha // Unix systems (make sure you have sudo previleges)
+```
+After that you just need to run in your terminal
+```
+$ npm test
 ```

@@ -4,7 +4,7 @@
   "description": "Simple node API that prints the numbers from 1 to 100 by default upon receiving a single request with no parameters. For multiples of 3, print the word 'Pé', for multiples of 5 print the word 'Do'. For multiples of both 3 and 5, print 'Pédo'",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "express-swagger-generator": "^1.1.7",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.3"
   }
 }

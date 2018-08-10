@@ -2,38 +2,12 @@ const Joi = require('joi');
 const express = require('express');
 const app = express();
 const expressSwagger = require('express-swagger-generator')(app);
-const port = process.env.PORT || 3000;
-const printPedo = require('./peDoLogic');
+const {PORT} = require('./port');
+const pedoLogic = require('./logic/peDoLogic');
+const {swaggerOptions} = require('./swagger/swaggerOptions');
 
-const options = {
-    swaggerDefinition: {
-        info: {
-            description: 'This is a simple node API made with love and swag!',
-            title: 'Simple Node Api',
-            version: '1.0.0',
-        },
-        host: `localhost:${port}`,
-        basePath: '/v1',
-        produces: [
-            "application/json",
-            "application/xml"
-        ],
-        schemes: ['http', 'https'],
-        securityDefinitions: {
-            JWT: {
-                type: 'apiKey',
-                in: 'header',
-                name: 'Authorization',
-                description: "",
-            }
-        }
-    },
-    basedir: __dirname, //app absolute path
-    files: ['./server.js'] //Path to the API handle folder
-};
-
-expressSwagger(options);
-
+// Load swagger options
+expressSwagger(swaggerOptions);
 
 // Redirect the root path to /api-docs
 app.get('/', (req, res) => {
@@ -62,13 +36,14 @@ app.get('/v1/api/print', (req, res) => {
         max: Joi.number().positive().greater(Joi.ref('min'))
     };
     const {error} = Joi.validate(rangeNums, schema);
-
+    
     if (error) {
         res.status(400).send({error: error.details[0].message});
         return;
     }
-
-    res.send(printPedo(rangeNums.min, rangeNums.max));
+    
+    // Ensure we pass numbers
+    res.send(pedoLogic(+rangeNums.min, +rangeNums.max));
 });
 
 // Redirect page not found
@@ -76,5 +51,6 @@ app.use(function (req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
 });
 
-console.log(`Listening on port ${port}...`);
-app.listen(port);
+// Log and listen the current port the server is currently running
+console.log(`Listening on port ${PORT}...`);
+app.listen(PORT);
