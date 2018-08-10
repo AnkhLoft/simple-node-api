@@ -8,7 +8,7 @@ const printPedo = require('./peDoLogic');
 const options = {
     swaggerDefinition: {
         info: {
-            description: 'This is a simple node API',
+            description: 'This is a simple node API made with love and swag!',
             title: 'Simple Node Api',
             version: '1.0.0',
         },
